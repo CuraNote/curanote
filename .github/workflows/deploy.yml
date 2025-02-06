@@ -27,16 +27,19 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build  # Change if using gulp build
+        run: gulp build  # Change if necessary
+
+      - name: Debug working directory
+        run: ls -la  # Check what files exist
 
       - name: Debug build output
-        run: ls -la dist  # Ensure /dist exists before deploying
+        run: ls -la dist || ls -la public  # Check if /dist or /public exists
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist  # Ensure this matches your build output
+          path: dist  # Change to public if needed
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
