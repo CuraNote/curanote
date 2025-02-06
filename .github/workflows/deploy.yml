@@ -1,10 +1,9 @@
 name: Deploy Start Bootstrap Personal to GitHub Pages
 
-
 on:
   push:
     branches:
-      - main  # Change to your main branch if different
+      - main
 
 permissions:
   contents: read
@@ -25,16 +24,19 @@ jobs:
           node-version: 18  # Change if needed
 
       - name: Install dependencies
-        run: npm install  # Install Bootstrap dependencies
+        run: npm install
 
       - name: Build project
-        run: npm run build  # This should generate the /dist folder
+        run: npm run build  # Change if using gulp build
+
+      - name: Debug build output
+        run: ls -la dist  # Ensure /dist exists before deploying
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist  # Ensure this matches your build output folder
+          path: dist  # Ensure this matches your build output
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
