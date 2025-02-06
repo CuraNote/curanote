@@ -3,7 +3,7 @@ name: Deploy Start Bootstrap Personal to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # Change to your main branch if different
+      - main  # Change to your main branch if different
 
 permissions:
   contents: read
