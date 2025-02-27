@@ -4,99 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CuraNote - Save Time, Focus on Clients</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6C63FF, #957DAD);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         .hero {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: white;
-            padding: 80px 20px;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
         }
         .cta-button {
-            background-color: #ffcc00;
+            background: #FFB400;
             color: #000;
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border-radius: 5px;
+            font-size: 1rem;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
         }
         .cta-button:hover {
-            background-color: #e6b800;
-            color: #000;
+            background: #E69B00;
         }
-        .section-heading {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .section {
+            padding: 40px 20px;
         }
-        .icon-list li {
-            font-size: 1.2rem;
-        }
-        .team-member {
-            background: #f8f9fa;
+        .dashboard-preview {
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
+            border-radius: 12px;
+            margin-top: 20px;
         }
-        footer {
-            background: #222;
-            color: white;
+        .footer {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+            .section {
+                padding: 30px 15px;
+            }
+            .dashboard-preview {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">CuraNote</a>
-        </div>
-    </nav>
-    
-    <header class="hero text-center">
-        <h1>Save Time, Focus on Clients</h1>
-        <p class="lead">Therapists waste hours on notes. CuraNote does it for you.</p>
-        <a href="mailto:hello@curanote.app" class="cta-button">Join Our Beta</a>
-    </header>
-    
-    <section class="container my-5 text-center">
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="section-heading">📉 The Problem</h3>
-                <p>Therapists spend **too much time** on session notes instead of helping clients.</p>
-                <ul class="list-unstyled icon-list">
-                    <li>🕐 Lost Time = Fewer Clients</li>
-                    <li>🔥 Admin Burnout is Real</li>
-                    <li>🐢 Manual Notes are Inefficient</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h3 class="section-heading">🚀 The Solution</h3>
-                <p>CuraNote’s AI **automates note-taking** so you can focus on therapy.</p>
-                <ul class="list-unstyled icon-list">
-                    <li>✅ AI-Powered Real-time Summaries</li>
-                    <li>🗒 Structured & Customizable Notes</li>
-                    <li>🔒 Secure & HIPAA-Compliant</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section class="bg-light py-5 text-center">
-        <h2 class="section-heading">Where We Are Now</h2>
-        <p>We’re onboarding early adopters! Be among the first to use CuraNote.</p>
+    <div class="hero">
+        <h1>Insightful AI for Therapy Notes</h1>
+        <p>Spend more time with clients, less on documentation.</p>
         <a href="mailto:hello@curanote.app" class="cta-button">Get Early Access</a>
-    </section>
+    </div>
+
+    <div class="section">
+        <h2>The Problem</h2>
+        <p>Therapists waste hours on session notes.</p>
+        <p>⏳ Lost time | ⚡ Burnout | 🐢 Slow process</p>
+    </div>
     
-    <section class="container text-center my-5">
-        <h2 class="section-heading">Know a Therapist? Share CuraNote!</h2>
-        <p class="lead">Help therapists reclaim their time. Spread the word!</p>
-        <a href="mailto:hello@curanote.app" class="cta-button">Refer a Therapist</a>
-    </section>
+    <div class="section">
+        <h2>The Solution</h2>
+        <p>CuraNote generates structured, real-time notes securely.</p>
+        <div class="dashboard-preview">
+            <p>📋 AI-Powered Summaries | 🔒 HIPAA Compliant | ⚡ Instant Documentation</p>
+        </div>
+    </div>
     
-    <footer class="text-center py-3">
+    <div class="section">
+        <h2>Where We Are Now</h2>
+        <p>🚀 Onboarding early users – Join today!</p>
+        <a href="mailto:hello@curanote.app" class="cta-button">Request Access</a>
+    </div>
+
+    <div class="footer">
         <p>&copy; 2025 CuraNote. All rights reserved.</p>
-    </footer>
+    </div>
 </body>
 </html>
